@@ -1,0 +1,195 @@
+.admin-dashboard__header > div > p:last-child {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+.admin-dashboard__stats {
+  margin-bottom: 24px;
+}
+
+.admin-dashboard__stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stat-card__icon--blue { background: var(--blue-100); color: var(--blue-600); }
+.stat-card__icon--green { background: var(--success-soft); color: var(--success-dark); }
+.stat-card__icon--navy { background: #e9eff7; color: var(--navy-800); }
+.stat-card__icon--red { background: var(--danger-soft); color: var(--danger-dark); }
+
+.admin-dashboard__users,
+.admin-dashboard__ai-activity {
+  margin-bottom: 24px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.admin-dashboard__user-table {
+  min-width: 850px;
+}
+
+.admin-dashboard__user-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 175px;
+  font-weight: 700;
+}
+
+.admin-dashboard__user-name > span:last-child {
+  display: grid;
+}
+
+.admin-dashboard__user-name small {
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 550;
+}
+
+.avatar--small {
+  width: 34px;
+  height: 34px;
+  background: var(--blue-100);
+  border: 0;
+  color: var(--blue-700);
+}
+
+.role-badge {
+  display: inline-flex;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.role-badge--admin {
+  background: #e9eff7;
+  color: var(--navy-800);
+}
+
+.role-badge--student {
+  background: var(--blue-100);
+  color: var(--blue-700);
+}
+
+.data-table td {
+  color: #3c4962;
+  font-size: 0.82rem;
+}
+
+.ai-activity-list {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ai-activity-item {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 13px;
+  padding: 16px 2px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ai-activity-item:last-child {
+  border-bottom: 0;
+}
+
+.ai-activity-item__icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 11px;
+}
+
+.ai-activity-item__icon svg {
+  width: 19px;
+}
+
+.ai-activity-item__icon--success {
+  background: var(--success-soft);
+  color: var(--success-dark);
+}
+
+.ai-activity-item__icon--failed {
+  background: var(--danger-soft);
+  color: var(--danger-dark);
+}
+
+.ai-activity-item__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ai-activity-item__heading strong,
+.ai-activity-item__heading span {
+  display: block;
+}
+
+.ai-activity-item__heading > div > span {
+  margin-top: 2px;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+
+.ai-activity-item__error,
+.ai-activity-item__message {
+  display: -webkit-box;
+  margin: 8px 0 5px;
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow-wrap: anywhere;
+}
+
+.ai-activity-item__error {
+  color: var(--danger-dark);
+}
+
+.ai-activity-item time {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.admin-dashboard__modal {
+  width: min(100%, 550px);
+}
+
+@media (max-width: 1220px) {
+  .admin-dashboard__stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .admin-dashboard__stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard__header .button {
+    width: 100%;
+  }
+
+  .ai-activity-item__heading {
+    flex-direction: column;
+  }
+
+  .admin-dashboard__users,
+  .admin-dashboard__ai-activity {
+    padding: 18px;
+  }
+}

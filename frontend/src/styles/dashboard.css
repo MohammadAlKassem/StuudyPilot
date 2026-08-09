@@ -1,0 +1,308 @@
+.student-dashboard__header > div > p:last-child {
+  margin-bottom: 0;
+  color: var(--text-secondary);
+}
+
+.student-dashboard__error p {
+  margin: 2px 0 0;
+}
+
+.student-dashboard__error .button {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.student-dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.dashboard-stat-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 132px;
+  padding: 20px;
+  align-items: flex-start;
+  gap: 14px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-stat-card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--blue-600);
+  content: '';
+}
+
+.dashboard-stat-card__icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  background: var(--blue-100);
+  border-radius: 12px;
+  color: var(--blue-600);
+}
+
+.dashboard-stat-card__label,
+.dashboard-stat-card__detail {
+  margin-bottom: 1px;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+}
+
+.dashboard-stat-card__label {
+  font-weight: 750;
+}
+
+.dashboard-stat-card__value {
+  display: block;
+  margin: 1px 0 3px;
+  font-size: 1.75rem;
+  line-height: 1.1;
+}
+
+.dashboard-stat-card--success::after { background: var(--success); }
+.dashboard-stat-card--success .dashboard-stat-card__icon { background: var(--success-soft); color: var(--success); }
+.dashboard-stat-card--warning::after,
+.dashboard-stat-card--amber::after { background: var(--warning); }
+.dashboard-stat-card--warning .dashboard-stat-card__icon,
+.dashboard-stat-card--amber .dashboard-stat-card__icon { background: var(--warning-soft); color: var(--warning); }
+.dashboard-stat-card--navy::after { background: var(--navy-800); }
+.dashboard-stat-card--navy .dashboard-stat-card__icon { background: #eaf0f8; color: var(--navy-800); }
+
+.student-dashboard__content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.dashboard-panel {
+  min-width: 0;
+  padding: 23px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.dashboard-panel__header h2,
+.dashboard-panel__header p {
+  margin-bottom: 0;
+}
+
+.dashboard-panel__eyebrow,
+.dashboard-ai-card__eyebrow {
+  color: var(--blue-600);
+  font-size: 0.69rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dashboard-deadlines__list {
+  display: grid;
+}
+
+.dashboard-deadline {
+  display: grid;
+  grid-template-columns: 5px minmax(0, 1fr) auto;
+  gap: 14px;
+  padding: 15px 3px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.dashboard-deadline:last-of-type {
+  border-bottom: 0;
+}
+
+.dashboard-deadline__priority {
+  width: 5px;
+  height: 34px;
+  background: var(--blue-500);
+  border-radius: 999px;
+}
+
+.dashboard-deadline__priority--high { background: var(--warning); }
+.dashboard-deadline__priority--low { background: var(--success); }
+
+.dashboard-deadline__details {
+  min-width: 0;
+}
+
+.dashboard-deadline__details h3,
+.dashboard-deadline__details p {
+  overflow: hidden;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-deadline__details h3 {
+  font-size: 0.91rem;
+}
+
+.dashboard-deadline__details p {
+  margin-top: 3px;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+}
+
+.dashboard-deadline__date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.dashboard-deadlines__remaining {
+  margin: 13px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.dashboard-panel__empty {
+  min-height: 270px;
+  padding: 25px 16px;
+}
+
+.dashboard-ai-card {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  padding: 27px;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 100% 0, rgba(40, 120, 255, 0.34), transparent 38%),
+    var(--navy-950);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  color: #c3d0e2;
+}
+
+.dashboard-ai-card::after {
+  position: absolute;
+  right: -50px;
+  bottom: -70px;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(255, 255, 255, 0.025);
+  content: '';
+}
+
+.dashboard-ai-card__icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 28px;
+  place-items: center;
+  background: var(--blue-600);
+  border-radius: 14px;
+  color: #fff;
+}
+
+.dashboard-ai-card__eyebrow {
+  position: relative;
+  z-index: 1;
+  color: #78aaff;
+}
+
+.dashboard-ai-card h2 {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 13px;
+  color: #fff;
+  font-size: 1.45rem;
+}
+
+.dashboard-ai-card > p:not(.dashboard-ai-card__eyebrow) {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 28px;
+  color: #aebed4;
+  line-height: 1.65;
+}
+
+.dashboard-ai-card .button {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+
+@media (max-width: 1180px) {
+  .student-dashboard__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1020px) {
+  .student-dashboard__content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-ai-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .student-dashboard__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-stat-card {
+    min-height: 112px;
+  }
+
+  .dashboard-panel__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-deadline {
+    grid-template-columns: 5px minmax(0, 1fr);
+  }
+
+  .dashboard-deadline__date {
+    grid-column: 2;
+  }
+
+  .student-dashboard__error {
+    flex-wrap: wrap;
+  }
+
+  .student-dashboard__error .button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
